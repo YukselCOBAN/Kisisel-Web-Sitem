@@ -1,28 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
 
 
-<body>
+<?php
 
-    <?php 
-    if($_SERVER['REQUEST_METHOD']==='POST'){
-        $email = $_POST['email'];
-        $pwd=$_POST['pwd'];
-        if($email=="b231210084@sakarya.edu.tr"&& $pwd=="b231210084"){
-            echo "Başarıyla giriş yaptınız!";
-        }
-        else {
-            echo "Kullanıcı adı veya şifre hatalı! ";
-        }
-        echo "Hoşgeldiniz".$email;
-    }
-    ?>
+ob_start();
 
-</body>
-</html>
+   $user ='b231210084@sakarya.edu.tr';
+   $pass ='b231210084';
+
+   if(isset($_POST['kullaniciAdi']))
+   {
+
+      $username=$_POST['kullaniciAdi'];
+      $password = $_POST['sifre'];
+
+      if($username==$user && $password==$pass){
+      echo "Hoşgeldiniz".$password."giriş işlemi başarılı.";
+       }
+
+     else{
+    header('location:login.html');
+     }
+
+   }
+
+?>
