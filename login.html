@@ -17,7 +17,6 @@
 
 <body>
 
-    
     <div class="login">
         <div class="login-screen">
             <div class="app-title">
@@ -27,12 +26,12 @@
             <form action="login.php" method="POST">
 <div class="login-form">
     <div class="control-group">
-        <input type="text" name="kullaniciAdi" class="login-field" 
-        placeholder="Kullanıcı Adı" id="login-name">
+        <input type="text" name="username" class="login-field" 
+        placeholder="Kullanıcı Adı" id="login-name" required>
         <label class="login-field-icon-fui-user" for="login-name"></label>
     </div>
 </div class="control-group">
- <input type="password" name="sifre" class="login-field" placeholder="Şifre" id="login-password">
+ <input type="password" name="password" class="login-field" placeholder="Şifre" id="login-password" required>
  <label class="login-field-icon-fui-user" for="login-password"></label>
  <br><br>
        </div>
@@ -44,8 +43,6 @@
        </div>
     </div>
 
-
-   
 
 
 

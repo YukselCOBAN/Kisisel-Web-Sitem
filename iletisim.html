@@ -48,37 +48,50 @@
       <main id="main">
         <section>
           <div class="container contact-form">
+
             <form>
+
               <h3>Bize Ulaşın</h3>
-            
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input type="text"name="txtName" class="form-control" placeholder="İsim: "
+                    <input type="text"name="txtName" id="isim" class="form-control" placeholder="İsim: "
                     value=""
                     />
                   </div>
+                  <br>
+                
                   <div class="form-group">
-                    <input type="text"name="txtEmail"class="form-control"placeholder="Email: "
-                      value=""
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input type="text"name="txtPhone"class="form-control"placeholder="Telefon: "
+                    <input type="text"name="txtPhone" id="tel" class="form-control"placeholder="Telefon: "
                       value=""
                     />
                   </div>
                   <br>
+
                   <div class="form-group">
-                    <input type="submit"name="btnSubmit"class="btnContact"value="Mesaj Gönder"
+                    <input type="text"name="txtEmail" id="email" class="form-control"placeholder="Email: "
+                    onkeyup="Validation()"/>    <!--Klavyeden elini çekince Validation() fonksiyonu çalışır.-->
+                  
+                  </div>
+                  <p id="Text"></p>
+                 
+                  <div class="form-group">
+                    <input type="submit"name="btnSubmit"class="btnContact"value="Gönder"
+                    style="background-color: #96d46a;"
+                    />
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <input type="submit"name="btnDelete"class="btnContact"value="Temizle"
                     style="background-color: #96d46a;"
                     />
                   </div>
                 </div>
+               
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea name="txtMsg"class="form-control " placeholder="Mesajınız:"
-                     style="width: 400px; height: 180px;"
+                    <textarea name="txtMsg"class="form-control " id="mesaj" placeholder="Mesajınız:"
+                     style="width: 400px; height: 325px;"
                     ></textarea>
                   </div>
                 </div>
@@ -91,6 +104,7 @@
      
   <header class="main-header">
     <nav class="main-nav">
+      <div></div>
       <ul class="main-nav__items">
         <li class="main-nav__item">
           <a href="iletisim.html">İLETİŞİM</a>
@@ -112,11 +126,28 @@
           <a href="login.html">LOG IN</a>
         </li>
       </ul>
+      <br><br>
     </nav>
   </header>
-      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+     
+
+
+
+  <script src="iletisim.js"></script>
+ 
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" 
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" 
+crossorigin="anonymous"></script>
+
 
 </body>
 </html>
