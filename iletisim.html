@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+<head ng-app="emailValidationApp">
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +13,20 @@
     rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
     crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="iletisim.js"></script>
+
     <style>
         body {
-          background-color: #e68b4e;
+          background-color: #ef7829;
         }
       </style>
 
     </head>
 
-    <body>
+    <body ng-controller="MainController">
 
+        <p id="Text"></p>
         <footer class="main-footer">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -47,11 +52,14 @@
       <br>
       <main id="main">
         <section>
+      
           <div class="container contact-form">
 
-            <form>
+            <form >
 
-              <h3>Bize Ulaşın</h3>
+              <h3 style="font-family: 'Times New Roman', Times, serif; background-color: rgb(9, 127, 30);">
+              Bize Ulaşın</h3>
+             <br>       
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -67,27 +75,27 @@
                     />
                   </div>
                   <br>
-
+        
+                <div class="form-group">
+                  <input type="text" name="txtEmail" id="email" class="form-control"placeholder="Email: "
+                  onkeyup="Validation()"><!--Klavyeden elini çekince Validation() fonksiyonu çalışır.-->
+                </div>
+                <br>
+                
                   <div class="form-group">
-                    <input type="text"name="txtEmail" id="email" class="form-control"placeholder="Email: "
-                    onkeyup="Validation()"/>    <!--Klavyeden elini çekince Validation() fonksiyonu çalışır.-->
-                  
-                  </div>
-                  <p id="Text"></p>
-                 
-                  <div class="form-group">
-                    <input type="submit"name="btnSubmit"class="btnContact"value="Gönder"
-                    style="background-color: #96d46a;"
+                    <input type="submit"name="btnSubmit"class="btnContact "value="Gönder"
+                    style="background-color: #6fd328;"
                     />
                   </div>
                   <br>
                   <div class="form-group">
-                    <input type="submit"name="btnDelete"class="btnContact"value="Temizle"
-                    style="background-color: #96d46a;"
+                    <input type="submit" id="button" name="btnDelete"class="btnContact"value="Temizle"
+                    style="background-color: #6fd328;"
                     />
-                  </div>
                 </div>
-               
+                <br>
+                </div>
+
                 <div class="col-md-6">
                   <div class="form-group">
                     <textarea name="txtMsg"class="form-control " id="mesaj" placeholder="Mesajınız:"
@@ -102,6 +110,7 @@
       </main>
   <br><br>
      
+  
   <header class="main-header">
     <nav class="main-nav">
       <div></div>

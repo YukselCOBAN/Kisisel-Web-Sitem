@@ -5,21 +5,20 @@ function Validation(){
     var Isım=document.getElementById('isim').value;
     var Tel=document.getElementById('tel').value;
     
-    var control=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/;
+    var control="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/";
 
     var text=document.getElementById('Text');
    
 
     if(Email.match(control))// alt dizinin içeriği doluysa true boşsa false döner.
     {
-   text.innerHTML="e-mail adresiniz geçerli ";
-   text.style.color='darkgreen';
+   text.innerHTML="e-mail adresiniz geçersiz ";
+   text.style.color='darkred';
     }
     else{
-        text.innerHTML='e-mail adresiniz geçersiz';
-        text.style.color='red';
+        text.innerHTML='e-mail adresiniz geçerli';
+        text.style.color='darkgreen';
     }
-
 
     if(document.getElementById("isim").value=="")
         {
@@ -33,13 +32,9 @@ function Validation(){
         {
             alert("Email kısmı boş");
         }
-        else if(document.getElementById("mesaj").value=="")
-            {
+        else 
+        {
                 alert("Mesaj kısmı boş");
-            }
-            else
-            {
-                alert("Tüm kısımlar boş");
-            }
-
+        }
+       
 }

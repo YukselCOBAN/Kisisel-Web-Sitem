@@ -50,7 +50,7 @@ body{
     margin-bottom:20px;
     margin-left:60px;
     border:10px solid #e7bdd9;
-    box-shadow: 6px 7px 9px 5px #69ceea;
+    box-shadow: 6px 7px 9px 5px #42022f;
 
 }
 .profile-img img{
@@ -73,25 +73,11 @@ body{
     margin-right:-15px;
 
 }
+
 .p1{
 
     padding:9px 10px;
     font-size:11px;
-
-}
-.icons1{
-
-    font-size:16px!important;
-    padding-right:10px!important;
-    vertical-align:sub;
-
-}
-.skill{
-
-    text-align:right;
-    padding-top:2px;
-    padding-bottom:2px;
-    color:white;
 
 }
 .name-div{
@@ -121,6 +107,7 @@ body{
     line-height:18px;
 
 }
+
 h2{
 
     font-size:16px;
@@ -129,13 +116,6 @@ h2{
     color:#020c56;
     
 }
-.icons3{
-
-    vertical-align:bottom;
-    font-size:21px!important;
-    color:#623aa3;
-
-}
 /* login.html'nin stilleri geneli - body üstte*/
 *{
 
@@ -143,9 +123,10 @@ h2{
 
 }
 
-*:focus{
+.app-title{
 
-outline:none;
+    text-align:center;
+    color:#777;
 
 }
 
@@ -163,13 +144,6 @@ outline:none;
  border-radius:5px;
 
 }
-.app-title{
-
-    text-align:center;
-    color:#777;
-
-}
-
 .login-form{
 
     text-align: center;
