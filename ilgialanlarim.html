@@ -20,36 +20,23 @@
 </head>
 
 <body>
-    
 <br>
-
     <button type="button" class="btn btn-danger btn-lg">BİLGİLERİ GETİR</button>
 
 <script>
 
    document.querySelector("button").addEventListener("click",()=>{
-    
-   /* fetch('https://api.collectapi.com/pray/single?ezan=Yats%C4%B1&data.city=istanbul')
-    
-    .then(response=>response.json())
-    .then(json=>console.log(json))
-    .catch(err=>console.log(err))*/
-
-   
     fetch("https://api.tvmaze.com/search/shows?q=war")
     .then(response=>response.json())
-    .then(veri=>{
-       
+    .then(veri=>{ 
+    
      var verimiz =JSON.stringify(veri);
      console.log(veri);
      alert("Veriler alındı.");
      
     })
-     
    })
-  
 
 </script>
-
 </body>
 </html>

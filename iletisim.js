@@ -9,15 +9,16 @@ function Validation(){
 
     var text=document.getElementById('Text');
    
+   
 
     if(Email.match(control))// alt dizinin içeriği doluysa true boşsa false döner.
     {
-   text.innerHTML="e-mail adresiniz geçersiz ";
-   text.style.color='darkred';
+   text.innerHTML="e-mail adresiniz geçerli";
+   text.style.color='darkgreen';
     }
     else{
-        text.innerHTML='e-mail adresiniz geçerli';
-        text.style.color='darkgreen';
+        text.innerHTML='e-mail adresiniz geçersiz';
+        text.style.color='red';
     }
 
     if(document.getElementById("isim").value=="")
